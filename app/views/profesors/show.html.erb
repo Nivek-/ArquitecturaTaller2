@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grado academido:</strong>
+  <%= @profesor.grado_academido %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @profesor.titulo %>
+</p>
+
+<p>
+  <strong>Fecha contrato:</strong>
+  <%= @profesor.fecha_contrato %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @profesor.usuario %>
+</p>
+
+<%= link_to 'Edit', edit_profesor_path(@profesor) %> |
+<%= link_to 'Back', profesors_path %>

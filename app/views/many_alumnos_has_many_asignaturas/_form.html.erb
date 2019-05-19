@@ -1,0 +1,37 @@
+<%= form_with(model: many_alumnos_has_many_asignatura, local: true) do |form| %>
+  <% if many_alumnos_has_many_asignatura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(many_alumnos_has_many_asignatura.errors.count, "error") %> prohibited this many_alumnos_has_many_asignatura from being saved:</h2>
+
+      <ul>
+      <% many_alumnos_has_many_asignatura.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nota %>
+    <%= form.text_field :nota %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ponderacion %>
+    <%= form.number_field :ponderacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alumno_id %>
+    <%= form.text_field :alumno_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asignatura_id %>
+    <%= form.text_field :asignatura_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

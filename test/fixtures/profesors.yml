@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grado_academido: MyString
+  titulo: MyString
+  fecha_contrato: 2019-05-19
+  usuario: one
+
+two:
+  grado_academido: MyString
+  titulo: MyString
+  fecha_contrato: 2019-05-19
+  usuario: two

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Horarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bloque</th>
+      <th>Dia de la semana</th>
+      <th>Asignatura</th>
+      <th>Aula </th>
+      <th>Edificio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horarios.each do |horario| %>
+      <tr>
+        <td><%= horario.bloque %></td>
+        <td><%= case horario.dia_de_la_semana when 1 then'Lunes' when 2 then 'Martes' when 3 then 'Miercoles' when 4 then 'Jueves' when 5 then 'Viernes' when 6 then 'Sabado' when 7 then 'Viernes' end %></td>
+        <td><%= horario.asignatura.nombre %></td>
+        <td><%= horario.aula.numero_aula %></td>
+        <td><%= horario.aula.edificio %></td>
+        <td><%= link_to 'Show', horario %></td>
+        <td><%= link_to 'Edit', edit_horario_path(horario) %></td>
+        <td><%= link_to 'Destroy', horario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Horario', new_horario_path %>

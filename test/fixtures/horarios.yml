@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bloque: 1
+  dia_de_la_semana: 1
+  asignatura: one
+  aula: one
+
+two:
+  bloque: 1
+  dia_de_la_semana: 1
+  asignatura: two
+  aula: two

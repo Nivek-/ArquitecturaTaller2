@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Credito obtenido:</strong>
+  <%= @alumno.credito_obtenido %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @alumno.usuario.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_alumno_path(@alumno) %> |
+<%= link_to 'Back', alumnos_path %>

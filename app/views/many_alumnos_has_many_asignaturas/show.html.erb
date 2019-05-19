@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nota:</strong>
+  <%= @many_alumnos_has_many_asignatura.nota %>
+</p>
+
+<p>
+  <strong>Ponderacion:</strong>
+  <%= @many_alumnos_has_many_asignatura.ponderacion %>
+</p>
+
+<p>
+  <strong>Alumno:</strong>
+  <%= @many_alumnos_has_many_asignatura.alumno %>
+</p>
+
+<p>
+  <strong>Asignatura:</strong>
+  <%= @many_alumnos_has_many_asignatura.asignatura %>
+</p>
+
+<%= link_to 'Edit', edit_many_alumnos_has_many_asignatura_path(@many_alumnos_has_many_asignatura) %> |
+<%= link_to 'Back', many_alumnos_has_many_asignaturas_path %>

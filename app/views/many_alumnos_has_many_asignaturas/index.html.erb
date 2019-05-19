@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Many Alumnos Has Many Asignaturas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota</th>
+      <th>Ponderacion</th>
+      <th>Alumno</th>
+      <th>Asignatura</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @many_alumnos_has_many_asignaturas.each do |many_alumnos_has_many_asignatura| %>
+      <tr>
+        <td><%= many_alumnos_has_many_asignatura.nota %></td>
+        <td><%= many_alumnos_has_many_asignatura.ponderacion %></td>
+        <td><%= many_alumnos_has_many_asignatura.alumno.usuario.nombre+' '+many_alumnos_has_many_asignatura.alumno.usuario.apellido %></td>
+        <td><%= many_alumnos_has_many_asignatura.asignatura.nombre %></td>
+        <td><%= link_to 'Show', many_alumnos_has_many_asignatura %></td>
+        <td><%= link_to 'Edit', edit_many_alumnos_has_many_asignatura_path(many_alumnos_has_many_asignatura) %></td>
+        <td><%= link_to 'Destroy', many_alumnos_has_many_asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Many Alumnos Has Many Asignatura', new_many_alumnos_has_many_asignatura_path %>

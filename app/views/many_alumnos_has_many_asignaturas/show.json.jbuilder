@@ -1,0 +1,1 @@
+json.partial! "many_alumnos_has_many_asignaturas/many_alumnos_has_many_asignatura", many_alumnos_has_many_asignatura: @many_alumnos_has_many_asignatura
